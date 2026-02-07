@@ -1,0 +1,36 @@
+<Solution>
+  <Folder Name="/host/">
+    <Project Path="host/ProductManagement.AuthServer/ProductManagement.AuthServer.csproj" />
+    <Project Path="host/ProductManagement.Blazor.Host.Client/ProductManagement.Blazor.Host.Client.csproj" />
+    <Project Path="host/ProductManagement.Blazor.Host/ProductManagement.Blazor.Host.csproj" />
+    <Project Path="host/ProductManagement.Blazor.Server.Host/ProductManagement.Blazor.Server.Host.csproj" />
+    <Project Path="host/ProductManagement.Host.Shared/ProductManagement.Host.Shared.csproj" />
+    <Project Path="host/ProductManagement.HttpApi.Host/ProductManagement.HttpApi.Host.csproj" />
+    <Project Path="host/ProductManagement.Web.Host/ProductManagement.Web.Host.csproj" />
+    <Project Path="host/ProductManagement.Web.Unified/ProductManagement.Web.Unified.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/ProductManagement.Application.Contracts/ProductManagement.Application.Contracts.csproj" />
+    <Project Path="src/ProductManagement.Application/ProductManagement.Application.csproj" />
+    <Project Path="src/ProductManagement.Blazor.Server/ProductManagement.Blazor.Server.csproj" />
+    <Project Path="src/ProductManagement.Blazor.WebAssembly.Bundling/ProductManagement.Blazor.WebAssembly.Bundling.csproj" />
+    <Project Path="src/ProductManagement.Blazor.WebAssembly/ProductManagement.Blazor.WebAssembly.csproj" />
+    <Project Path="src/ProductManagement.Blazor/ProductManagement.Blazor.csproj" />
+    <Project Path="src/ProductManagement.Domain.Shared/ProductManagement.Domain.Shared.csproj" />
+    <Project Path="src/ProductManagement.Domain/ProductManagement.Domain.csproj" />
+    <Project Path="src/ProductManagement.EntityFrameworkCore/ProductManagement.EntityFrameworkCore.csproj" />
+    <Project Path="src/ProductManagement.HttpApi.Client/ProductManagement.HttpApi.Client.csproj" />
+    <Project Path="src/ProductManagement.HttpApi/ProductManagement.HttpApi.csproj" />
+    <Project Path="src/ProductManagement.Installer/ProductManagement.Installer.csproj" />
+    <Project Path="src/ProductManagement.MongoDB/ProductManagement.MongoDB.csproj" />
+    <Project Path="src/ProductManagement.Web/ProductManagement.Web.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/ProductManagement.Application.Tests/ProductManagement.Application.Tests.csproj" />
+    <Project Path="test/ProductManagement.Domain.Tests/ProductManagement.Domain.Tests.csproj" />
+    <Project Path="test/ProductManagement.EntityFrameworkCore.Tests/ProductManagement.EntityFrameworkCore.Tests.csproj" />
+    <Project Path="test/ProductManagement.HttpApi.Client.ConsoleTestApp/ProductManagement.HttpApi.Client.ConsoleTestApp.csproj" />
+    <Project Path="test/ProductManagement.MongoDB.Tests/ProductManagement.MongoDB.Tests.csproj" />
+    <Project Path="test/ProductManagement.TestBase/ProductManagement.TestBase.csproj" />
+  </Folder>
+</Solution>
