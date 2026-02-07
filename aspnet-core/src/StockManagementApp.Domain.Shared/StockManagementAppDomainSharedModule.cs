@@ -12,6 +12,7 @@ using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.Validation.Localization;
 using Volo.Abp.VirtualFileSystem;
+using ProductManagement;
 
 namespace StockManagementApp;
 
@@ -23,7 +24,9 @@ namespace StockManagementApp;
     typeof(AbpOpenIddictDomainSharedModule),
     typeof(AbpPermissionManagementDomainSharedModule),
     typeof(AbpSettingManagementDomainSharedModule),
-    typeof(AbpTenantManagementDomainSharedModule)    
+    typeof(AbpTenantManagementDomainSharedModule),
+    typeof(ProductManagementDomainSharedModule)
+
     )]
 public class StockManagementAppDomainSharedModule : AbpModule
 {

@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\modules\ProductManagement\src\ProductManagement.Application.Contracts\ProductManagement.Application.Contracts.csproj" />
     <ProjectReference Include="..\StockManagementApp.Domain.Shared\StockManagementApp.Domain.Shared.csproj" />
   </ItemGroup>
 

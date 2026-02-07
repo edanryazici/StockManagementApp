@@ -7,6 +7,7 @@ using Volo.Abp.PermissionManagement;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.VirtualFileSystem;
+using ProductManagement;
 
 namespace StockManagementApp;
 
@@ -17,7 +18,8 @@ namespace StockManagementApp;
     typeof(AbpPermissionManagementHttpApiClientModule),
     typeof(AbpTenantManagementHttpApiClientModule),
     typeof(AbpFeatureManagementHttpApiClientModule),
-    typeof(AbpSettingManagementHttpApiClientModule)
+    typeof(AbpSettingManagementHttpApiClientModule),
+    typeof(ProductManagementHttpApiClientModule)
 )]
 public class StockManagementAppHttpApiClientModule : AbpModule
 {

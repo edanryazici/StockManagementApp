@@ -7,6 +7,7 @@ using Volo.Abp.PermissionManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
 using Microsoft.Extensions.DependencyInjection;
+using ProductManagement;
 
 namespace StockManagementApp;
 
@@ -18,7 +19,8 @@ namespace StockManagementApp;
     typeof(AbpPermissionManagementApplicationModule),
     typeof(AbpTenantManagementApplicationModule),
     typeof(AbpFeatureManagementApplicationModule),
-    typeof(AbpSettingManagementApplicationModule)
+    typeof(AbpSettingManagementApplicationModule),
+    typeof(ProductManagementApplicationModule)
     )]
 public class StockManagementAppApplicationModule : AbpModule
 {

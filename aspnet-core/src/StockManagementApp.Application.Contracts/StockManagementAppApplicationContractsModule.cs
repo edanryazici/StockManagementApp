@@ -6,6 +6,7 @@ using Volo.Abp.ObjectExtending;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
+using ProductManagement;
 
 namespace StockManagementApp;
 
@@ -17,7 +18,8 @@ namespace StockManagementApp;
     typeof(AbpPermissionManagementApplicationContractsModule),
     typeof(AbpSettingManagementApplicationContractsModule),
     typeof(AbpTenantManagementApplicationContractsModule),
-    typeof(AbpObjectExtendingModule)
+    typeof(AbpObjectExtendingModule),
+    typeof(ProductManagementApplicationContractsModule)
 )]
 public class StockManagementAppApplicationContractsModule : AbpModule
 {

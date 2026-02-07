@@ -14,6 +14,7 @@ using Volo.Abp.PermissionManagement.Identity;
 using Volo.Abp.PermissionManagement.OpenIddict;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
+using ProductManagement;
 
 namespace StockManagementApp;
 
@@ -28,7 +29,8 @@ namespace StockManagementApp;
     typeof(AbpPermissionManagementDomainIdentityModule),
     typeof(AbpSettingManagementDomainModule),
     typeof(AbpTenantManagementDomainModule),
-    typeof(AbpEmailingModule)
+    typeof(AbpEmailingModule),
+    typeof(ProductManagementDomainModule)
 )]
 public class StockManagementAppDomainModule : AbpModule
 {

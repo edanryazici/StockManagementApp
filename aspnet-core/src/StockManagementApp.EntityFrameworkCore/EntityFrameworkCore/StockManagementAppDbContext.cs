@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ProductManagement.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
@@ -73,6 +74,10 @@ public class StockManagementAppDbContext :
         builder.ConfigureOpenIddict();
         builder.ConfigureFeatureManagement();
         builder.ConfigureTenantManagement();
+        builder.ConfigureProductManagement(); //ProductManagement modülüne ait olan Entity'lerin
+                                              //(tabloların), ana projenin DbContext'i tarafından
+                                              //tanınmasını ve veritabanı şemasına (tablo isimleri,
+                                              //ilişkiler, kısıtlamalar) dahil edilmesini sağlar.
 
         /* Configure your own tables/entities inside here */
 

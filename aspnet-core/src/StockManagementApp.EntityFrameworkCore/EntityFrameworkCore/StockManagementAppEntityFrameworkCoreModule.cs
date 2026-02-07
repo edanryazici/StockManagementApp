@@ -12,6 +12,8 @@ using Volo.Abp.OpenIddict.EntityFrameworkCore;
 using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
+using ProductManagement;
+using ProductManagement.EntityFrameworkCore;
 
 namespace StockManagementApp.EntityFrameworkCore;
 
@@ -25,7 +27,9 @@ namespace StockManagementApp.EntityFrameworkCore;
     typeof(AbpBackgroundJobsEntityFrameworkCoreModule),
     typeof(AbpAuditLoggingEntityFrameworkCoreModule),
     typeof(AbpTenantManagementEntityFrameworkCoreModule),
-    typeof(AbpFeatureManagementEntityFrameworkCoreModule)
+    typeof(AbpFeatureManagementEntityFrameworkCoreModule),
+    typeof(ProductManagementEntityFrameworkCoreModule)
+    
     )]
 public class StockManagementAppEntityFrameworkCoreModule : AbpModule
 {
