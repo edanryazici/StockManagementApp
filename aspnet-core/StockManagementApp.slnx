@@ -1,0 +1,35 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/StockManagementApp.Application.Contracts/StockManagementApp.Application.Contracts.csproj" />
+    <Project Path="src/StockManagementApp.Application/StockManagementApp.Application.csproj" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Project Path="src/StockManagementApp.DbMigrator/StockManagementApp.DbMigrator.csproj" />
+    <Project Path="src/StockManagementApp.Domain.Shared/StockManagementApp.Domain.Shared.csproj" />
+    <Project Path="src/StockManagementApp.Domain/StockManagementApp.Domain.csproj" />
+    <Project Path="src/StockManagementApp.EntityFrameworkCore/StockManagementApp.EntityFrameworkCore.csproj" />
+    <Project Path="src/StockManagementApp.HttpApi.Client/StockManagementApp.HttpApi.Client.csproj" />
+    
+    <Project Path="src/StockManagementApp.HttpApi.Host/StockManagementApp.HttpApi.Host.csproj" />
+    <Project Path="src/StockManagementApp.HttpApi/StockManagementApp.HttpApi.csproj" />
+    
+    
+    
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/StockManagementApp.Application.Tests/StockManagementApp.Application.Tests.csproj" />
+    <Project Path="test/StockManagementApp.Domain.Tests/StockManagementApp.Domain.Tests.csproj" />
+    <Project Path="test/StockManagementApp.EntityFrameworkCore.Tests/StockManagementApp.EntityFrameworkCore.Tests.csproj" />
+    <Project Path="test/StockManagementApp.HttpApi.Client.ConsoleTestApp/StockManagementApp.HttpApi.Client.ConsoleTestApp.csproj" />
+    
+    <Project Path="test/StockManagementApp.TestBase/StockManagementApp.TestBase.csproj" />
+    
+  </Folder>
+</Solution>
