@@ -1,10 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProductManagement.EntityFrameworkCore;
+using StockManagementApp.Customers;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.EntityFrameworkCore;
+using Volo.Abp.EntityFrameworkCore.Modeling;
 using Volo.Abp.FeatureManagement.EntityFrameworkCore;
 using Volo.Abp.Identity;
 using Volo.Abp.Identity.EntityFrameworkCore;
@@ -87,5 +89,17 @@ public class StockManagementAppDbContext :
         //    b.ConfigureByConvention(); //auto configure for the base class props
         //    //...
         //});
+
+        builder.Entity<Customer>(b =>
+        {
+            b.ToTable(name: StockManagementAppConsts.DbTablePrefix + "Customers", StockManagementAppConsts.DbSchema);
+            b.ConfigureByConvention();
+
+            b.Property(x => x.Name)
+            .IsRequired()
+            .HasMaxLength(CustomerConsts.MaxNameLength);
+
+            b.Property(x => x.Name).HasMaxLength(CustomerConsts.MaxNameLength);
+        });
     }
 }

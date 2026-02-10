@@ -23,7 +23,7 @@ namespace StockManagementApp.Customers
         {
             var customer = await CustomerManager.CreateAsync(input.Code);
             customer.SetName(input.Name);
-            await CustomerRepository.InsertAsync(customer, autoSave: true);
+            await CustomerRepository.InsertAsync(customer);
             return ObjectMapper.Map<Customer, CustomerDto>(customer);
 
         }
