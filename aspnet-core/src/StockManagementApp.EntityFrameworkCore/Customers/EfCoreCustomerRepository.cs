@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Primitives;
 using StockManagementApp.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,18 +12,19 @@ using System.Threading.Tasks;
 using Volo.Abp.Domain.Repositories.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
 
-namespace StockManagementApp.Customers
+namespace StockManagementApp.Customers;
+
+public class EfCoreCustomerRepository : EfCoreRepository<StockManagementAppDbContext, Customer, Guid>, ICustomerRepository
 {
-    public class EfCoreCustomerRepository : EfCoreRepository<StockManagementAppDbContext, Customer, Guid>, ICustomerRepository
+    public EfCoreCustomerRepository(IDbContextProvider<StockManagementAppDbContext> dbContextProvider) : base(dbContextProvider)
     {
-        public EfCoreCustomerRepository(IDbContextProvider<StockManagementAppDbContext> dbContextProvider) : base(dbContextProvider)
-        {
 
-        }
+    }
 
-        public Task<Customer> FindByCodeAsync(string code)
-        {
-            throw new NotImplementedException();
-        }
+    public async Task<Customer> FindByCodeAsync(string code, CancellationToken cancellationToken)
+    {
+        var dbSet = await GetQueryableAsync();
+        return await dbSet.FirstOrDefaultAsync(x => x.Code == code, 
+                           GetCancellationToken(cancellationToken));
     }
 }

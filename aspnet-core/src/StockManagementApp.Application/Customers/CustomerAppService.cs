@@ -21,7 +21,7 @@ namespace StockManagementApp.Customers
 
         public async Task<CustomerDto> CreateAsync(CustomerCreateDto input)
         {
-            var customer = await CustomerManager.CreateAsync(input.Code);
+            var customer = await CustomerManager.CreateAsync(input.Code); 
             customer.SetName(input.Name);
             await CustomerRepository.InsertAsync(customer);
             return ObjectMapper.Map<Customer, CustomerDto>(customer);

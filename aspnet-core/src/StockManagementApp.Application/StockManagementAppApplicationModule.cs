@@ -1,13 +1,15 @@
-﻿using Volo.Abp.Account;
-using Volo.Abp.Mapperly;
+﻿using Microsoft.Extensions.DependencyInjection;
+using ProductManagement;
+using Volo.Abp;
+using Volo.Abp.Account;
+using Volo.Abp.AutoMapper;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
+using Volo.Abp.Mapperly;
 using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
-using Microsoft.Extensions.DependencyInjection;
-using ProductManagement;
 
 namespace StockManagementApp;
 
@@ -20,12 +22,26 @@ namespace StockManagementApp;
     typeof(AbpTenantManagementApplicationModule),
     typeof(AbpFeatureManagementApplicationModule),
     typeof(AbpSettingManagementApplicationModule),
-    typeof(ProductManagementApplicationModule)
+    typeof(ProductManagementApplicationModule),
+    typeof(AbpAutoMapperModule)
     )]
 public class StockManagementAppApplicationModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
-        context.Services.AddMapperlyObjectMapper<StockManagementAppApplicationModule>();
+        //context.Services.AddMapperlyObjectMapper<StockManagementAppApplicationModule>();
+
+        Configure<AbpAutoMapperOptions>(options =>
+        {
+            
+            options.AddMaps<StockManagementAppApplicationModule>();
+        });
     }
+
+    public override void OnApplicationInitialization(ApplicationInitializationContext context)
+    {
+        base.OnApplicationInitialization(context);
+    }
+    
+
 }
