@@ -19,11 +19,6 @@ namespace StockManagementApp.Customers
         {
 
         }
-        public async Task<Customer?> FindByCodeAsync(string code, CancellationToken cancellationToken=default)
-        {
-            IQueryable<Customer?> dbSet = await GetQueryableAsync();
-            return await dbSet.FirstOrDefaultAsync(x => x.Code == code, cancellationToken);
-        }
 
         public Task<Customer> FindByCodeAsync(string code)
         {
